@@ -5,9 +5,10 @@ import { nonStandAloneDirective } from './non-standalone/nonStandAlone.directive
 import { noOpenerDirective } from './non-standalone/noOpener.directive';
 import { confirmDirective } from './non-standalone/confirm.directive';
 import { UserProfilecomponent } from './non-standalone/user-profile.component';
+import { CounterComponent } from './non-standalone/counter.component';
 
 @NgModule({
-  declarations: [NonStandaloneComponent, nonStandAloneDirective, noOpenerDirective, confirmDirective, UserProfilecomponent],
+  declarations: [NonStandaloneComponent, nonStandAloneDirective, noOpenerDirective, confirmDirective, UserProfilecomponent, CounterComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [NonStandaloneComponent]
