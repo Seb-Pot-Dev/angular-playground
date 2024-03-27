@@ -3,7 +3,8 @@ import { Component, Input, ElementRef } from '@angular/core';
 @Component({
     selector: 'counter',
     template: `
-     <div>
+        <h4>compteur:</h4>
+        <div style="display: flex; align-items:center;">
             <button (click)="onClickButtonMinus()">-</button>
             <div class="count">{{ count }}</div>
             <button (click)="onClickButtonPlus()">+</button>
@@ -11,14 +12,18 @@ import { Component, Input, ElementRef } from '@angular/core';
     `,
 })
 export class CounterComponent {
-    @Input()
-    count: number = 0;
 
+    @Input('initial-value')
+    count: number = 0;    
+     
+    @Input('step')
+    step: number = 1;
+    
     onClickButtonPlus(){
-        this.count++;
+        this.count += this.step;
     }
     onClickButtonMinus(){
-        this.count--;
+        this.count -= this.step;
     }
 
     constructor(){}
